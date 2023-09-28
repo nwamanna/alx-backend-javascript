@@ -10,11 +10,7 @@ export default class Car {
   }
 
   set brand(newBrand) {
-    if (typeof newBrand === 'string') {
-      this._brand = newBrand;
-    } else {
-      throw new TypeError('Brand must be a string');
-    }
+    this._brand = newBrand;
   }
 
   get motor() {
@@ -22,11 +18,7 @@ export default class Car {
   }
 
   set motor(newMotor) {
-    if (typeof newMotor === 'string') {
-      this._motor = newMotor;
-    } else {
-      throw new TypeError('Motor must be a string');
-    }
+    this._motor = newMotor;
   }
 
   get color() {
@@ -34,14 +26,10 @@ export default class Car {
   }
 
   set color(newColor) {
-    if (typeof newColor === 'string') {
-      this._color = newColor;
-    } else {
-      throw new TypeError('Color must be a string');
-    }
+    this._color = newColor;
   }
 
   cloneCar() {
-    return new this.constructor(`${this.brand}`, `${this.motor}`, `${this.color}`);
+    return new this.constructor();
   }
 }
