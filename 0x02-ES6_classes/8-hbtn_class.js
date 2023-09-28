@@ -35,5 +35,6 @@ export default class HolbertonClass {
     if (hint === 'string') {
       return `${this.location}`;
     }
+    return `${this.size}`;
   }
 }
