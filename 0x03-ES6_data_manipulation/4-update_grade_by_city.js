@@ -1,10 +1,10 @@
 import getStudentsByLocation from './2-get_students_by_loc';
 
 export default function updateStudentGradeByCity(arr, city, grade) {
-    if (!Array.isArray(arr) || !Array.isArray(grade)) {
-        return [];
-    }
-    
+  if (!Array.isArray(arr) || !Array.isArray(grade) || city) {
+    return [];
+  }
+
   const arrLoc = getStudentsByLocation(arr, city);
 
   const arrGrade = arrLoc.map((element) => {
